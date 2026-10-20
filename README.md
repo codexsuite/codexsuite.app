@@ -4,7 +4,7 @@ The landing page for **Codex**, the open-source writing studio for non-fiction b
 
 | Folder | What it is |
 |---|---|
-| [`site/`](site/) | The website. Plain HTML and CSS with no build step: `index.html`, `tokens.css`, `favicon.svg`, `og-image.png` and the screenshots in `shots/`. |
+| [`site/`](site/) | The website. Plain HTML and CSS with no build step: `index.html`, `tokens.css`, the icons (`favicon.svg`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`), `og-image.png`, the screenshots in `shots/`, and the files crawlers read: `robots.txt`, `sitemap.xml` and `site.webmanifest`. |
 | [`design/`](design/) | Reference assets: logo and favicon, design tokens, full-resolution screenshots of every screen in light and dark, and the social card source. See [`design/README.md`](design/README.md). |
 
 ## Run it locally
@@ -31,4 +31,5 @@ npx wrangler pages deploy site --project-name codexsuite --branch main
 
 - Colours, fonts and radii come from `site/tokens.css`, a copy of the Codex app's design tokens. Change the page's look there or in the `<style>` block in `index.html`, not with one-off hex values.
 - Every screenshot exists in light and dark. The page shows the one that matches the visitor's theme, so add or replace both.
+- Search and link previews: the page title, meta description, Open Graph and `twitter:*` tags, and the JSON-LD block are all in the `<head>` of `index.html`. The FAQ answers appear twice, in the visible `#faq` section and in the `FAQPage` JSON-LD, so change both together. Bump `<lastmod>` in `sitemap.xml` when the page changes meaningfully.
 - Links to GitHub point at the [`codexsuite`](https://github.com/codexsuite) org. Point them at the app repo once it is public.

@@ -3,20 +3,134 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Codex · The writing studio for books and series</title>
-<meta name="description" content="Codex is an open-source writing studio for non-fiction books and series: plan, research, write, clear your sources and export a print-ready PDF in one place. Coming soon.">
+<title>Codex · Open-source book writing software for authors</title>
+<meta name="description" content="Codex is free, open-source book writing software. Plan, research, write and export a print-ready PDF in one place, for non-fiction books, novels and series.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="application-name" content="Codex">
+<meta name="apple-mobile-web-app-title" content="Codex">
 <meta name="theme-color" content="#e8eef7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#171e2d" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://codexsuite.app/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Link previews: Open Graph for Facebook, LinkedIn, Slack, Discord, iMessage and WhatsApp; twitter:* for X -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Codex">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://codexsuite.app/">
-<meta property="og:title" content="Codex · Open source and coming soon">
-<meta property="og:description" content="Plan, research, write and print your book in one place.">
+<meta property="og:title" content="Codex · The open-source writing studio for books and series">
+<meta property="og:description" content="Plan, research, write and print your book in one place. Free and open source, built for non-fiction and just as happy with fiction. Coming soon.">
 <meta property="og:image" content="https://codexsuite.app/og-image.png">
+<meta property="og:image:secure_url" content="https://codexsuite.app/og-image.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Codex: your whole book, in one place. The writing studio for non-fiction books and series, shown beside the Write screen.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Codex · The open-source writing studio for books and series">
+<meta name="twitter:description" content="Plan, research, write and print your book in one place. Free and open source. Coming soon.">
+<meta name="twitter:image" content="https://codexsuite.app/og-image.png">
+<meta name="twitter:image:alt" content="Codex: your whole book, in one place. The writing studio for non-fiction books and series, shown beside the Write screen.">
+
+<!-- Structured data. Keep the FAQ answers in step with the visible #faq section. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://codexsuite.app/#org",
+      "name": "Codex",
+      "url": "https://codexsuite.app/",
+      "logo": "https://codexsuite.app/icon-512.png",
+      "sameAs": ["https://github.com/codexsuite"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://codexsuite.app/#website",
+      "name": "Codex",
+      "alternateName": "Codex Suite",
+      "url": "https://codexsuite.app/",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://codexsuite.app/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://codexsuite.app/#app",
+      "name": "Codex",
+      "alternateName": ["Codex Suite", "Codex writing studio"],
+      "url": "https://codexsuite.app/",
+      "description": "Codex is a free, open-source writing studio for books and series. Plan chapters and scenes, keep research in a linked knowledge base, write with AI help from your scene beats, clear quotes for copyright, build a bibliography and export a print-ready PDF. Built for non-fiction and also suited to novels and fiction series.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Book writing software",
+      "operatingSystem": "Web",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "image": "https://codexsuite.app/og-image.png",
+      "screenshot": [
+        "https://codexsuite.app/shots/write-light.webp",
+        "https://codexsuite.app/shots/plan-light.webp",
+        "https://codexsuite.app/shots/references-light.webp",
+        "https://codexsuite.app/shots/print-light.webp"
+      ],
+      "featureList": [
+        "Book and series library with shared style guides",
+        "Plan board of acts, chapters and scenes",
+        "Manuscript editor with scene beats and AI drafting",
+        "Knowledge base for people, sources, characters and worldbuilding",
+        "Citations, bibliography and copyright permission tracking",
+        "Print layout from LaTeX templates with a print-ready PDF export"
+      ],
+      "keywords": "book writing software, writing app for authors, non-fiction book writing, novel writing software, fiction writing app, open source writing software, Scrivener alternative, manuscript editor, book outlining, story bible, worldbuilding, AI writing assistant, citation manager, copyright permissions, book formatting, print-ready PDF, self-publishing",
+      "publisher": { "@id": "https://codexsuite.app/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://codexsuite.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Codex?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Codex is a free, open-source writing studio for long books and series. It puts book planning, a research knowledge base, a manuscript editor, citations and copyright clearance, and print layout in one app, so you can go from outline to print-ready PDF without moving your book between tools." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I write fiction or a novel in Codex?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Codex is designed around non-fiction first, but the same tools work for novels and fiction series. Plan acts, chapters and scenes on a board, keep characters, places and backstory in the knowledge base under your own categories, draft from scene beats, and lay the book out with the built-in Novel template at 6×9 or 5.5×8.5 inches." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Codex an alternative to Scrivener?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Codex covers the drafting and structure you might use Scrivener for, and adds what usually takes separate apps: a knowledge base that links itself into your text (a story bible, if you write fiction), source and permission tracking, and print layout of the kind you would otherwise do in a formatting tool such as Vellum or Atticus. It is free and open source." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Codex to self-publish a book?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Codex exports a print-ready PDF from LaTeX templates, with your choice of trim size, bleed and crop marks when your printer wants them, and a preflight check for low-resolution images. That is the kind of file print-on-demand services such as Amazon KDP and IngramSpark ask for." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Codex have an AI writing assistant?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Write a short scene beat and Codex drafts 200 to 600 words from it, using your plan and knowledge base as context so the draft fits the book. You choose the model, and you can regenerate or edit every word." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Codex cost, and when can I use it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Codex is free and open source. The designs are done and version 1 is being built now. Follow the project on GitHub to see it take shape and to hear first when early access opens." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Codex related to OpenAI Codex?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Codex at codexsuite.app is an independent, open-source writing studio for authors. It is not affiliated with OpenAI or its Codex coding agent." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="tokens.css">
 <style>
   /* Marketing layer on top of Codex tokens: colours, radii and fonts come from tokens.css;
@@ -89,7 +203,7 @@
   :root[data-theme="dark"] .mark::before, :root[data-theme="dark"] .mark::after { background: #06192a; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .mark::before, :root:not([data-theme="light"]) .mark::after { background: #06192a; } }
   .nav-links { display: flex; gap: 22px; font-size: 14px; color: var(--color-muted); }
-  .nav-links a { text-decoration: none; }
+  .nav-links a { text-decoration: none; white-space: nowrap; }
   .nav-links a:hover { color: var(--color-text); }
   .nav-spacer { flex: 1; }
   .icon-btn {
@@ -270,7 +384,7 @@
   .collab .doc { padding: 26px 30px 96px; }
   .collab .doc-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
   .collab .crumb { font-size: 12px; color: var(--color-muted); }
-  .collab .doc-head h3 { margin: 2px 0 0; font-size: 20px; letter-spacing: -.01em; }
+  .collab .doc-title { margin: 2px 0 0; font-size: 20px; font-weight: 700; letter-spacing: -.01em; }
   .presence { display: flex; align-items: center; gap: 10px; flex: none; }
   .avatars { display: flex; }
   .av {
@@ -305,7 +419,7 @@
   .minis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 56px; }
   .mini { padding: 22px; border-radius: 14px; background: var(--color-surface); border: 1px solid var(--color-border); }
   .mini svg { width: 20px; height: 20px; color: var(--color-accent); }
-  .mini h4 { margin: 14px 0 6px; font-size: 15.5px; }
+  .mini h3 { margin: 14px 0 6px; font-size: 15.5px; }
   .mini p { margin: 0; font-size: 14px; color: var(--color-muted); line-height: 1.5; }
 
   /* Open source + roadmap */
@@ -337,6 +451,18 @@
   .road .done .badge { background: color-mix(in srgb, var(--color-ok) 16%, transparent); color: var(--color-ok); }
   .road .now .badge { background: var(--color-accent-soft); color: var(--color-accent); }
 
+  /* FAQ: plain <details> so the answers are in the HTML for search engines and open without script */
+  .faq { max-width: 820px; margin: 48px auto 0; display: grid; gap: 10px; }
+  .faq details { border-radius: 14px; background: var(--color-surface); border: 1px solid var(--color-border); }
+  .faq summary {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px;
+    font-size: 16.5px; font-weight: 600; cursor: pointer; list-style: none;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary svg { width: 18px; height: 18px; flex: none; color: var(--color-muted); transition: transform .2s ease; }
+  .faq details[open] summary svg { transform: rotate(180deg); }
+  .faq details p { margin: 0; padding: 0 22px 20px; color: var(--color-muted); font-size: 15.5px; }
+
   .closing { text-align: center; padding-top: 40px; }
   .closing h2 { font-size: clamp(32px, 5vw, 56px); }
 
@@ -347,7 +473,7 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width: 980px) {
-    .stage .side, .callout.c3 { display: none; }
+    .stage .side, .callout.c3, .nav-links .nav-wide { display: none; }
     .panel, .spot, .spot.flip, .oss { grid-template-columns: minmax(0, 1fr); gap: 32px; }
     .spot.flip .copy { order: 0; }
     .pillars { grid-template-columns: minmax(0, 1fr); }
@@ -384,6 +510,7 @@
   <defs>
     <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
@@ -405,13 +532,14 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>Codex</a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Sections">
       <a href="#why">Why Codex</a>
       <a href="#tour">Tour</a>
       <a href="#sources">Sources</a>
-      <a href="#print">Print</a>
-      <a href="#together">Collaborate</a>
+      <a class="nav-wide" href="#print">Print</a>
+      <a class="nav-wide" href="#together">Collaborate</a>
       <a href="#roadmap">Roadmap</a>
+      <a class="nav-wide" href="#faq">FAQ</a>
     </nav>
     <div class="nav-spacer"></div>
     <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
@@ -435,22 +563,23 @@
       <div class="fine">
         <span><svg><use href="#i-check"/></svg>Free and open source</span>
         <span><svg><use href="#i-check"/></svg>Books and whole series</span>
+        <span><svg><use href="#i-check"/></svg>Novels welcome too</span>
         <span><svg><use href="#i-check"/></svg>Light and dark</span>
       </div>
 
       <div class="stage">
         <div class="side l frame" aria-hidden="true">
-          <img class="only-light" src="shots/library-light.webp" alt="">
-          <img class="only-dark" src="shots/library-dark.webp" alt="">
+          <img class="only-light" src="shots/library-light.webp" alt="" width="2000" height="1250">
+          <img class="only-dark" src="shots/library-dark.webp" alt="" width="2000" height="1250">
         </div>
         <div class="side r frame" aria-hidden="true">
-          <img class="only-light" src="shots/references-light.webp" alt="">
-          <img class="only-dark" src="shots/references-dark.webp" alt="">
+          <img class="only-light" src="shots/references-light.webp" alt="" width="2000" height="1250">
+          <img class="only-dark" src="shots/references-dark.webp" alt="" width="2000" height="1250">
         </div>
         <div class="main frame">
           <div class="frame-bar"><i></i><i></i><i></i><span class="url"><svg><use href="#i-lock"/></svg>codexsuite.app</span><span class="bal"></span></div>
-          <img class="only-light" src="shots/write-light.webp" alt="The Codex Write screen: a chapter of a non-fiction manuscript with scene beats, AI draft controls and a knowledge base sidebar" width="2000" height="1250">
-          <img class="only-dark" src="shots/write-dark.webp" alt="The Codex Write screen in dark mode" width="2000" height="1250">
+          <img class="only-light" src="shots/write-light.webp" alt="The Codex Write screen: a chapter of a non-fiction manuscript with scene beats, AI draft controls and a knowledge base sidebar" width="2000" height="1250" fetchpriority="high">
+          <img class="only-dark" src="shots/write-dark.webp" alt="The Codex Write screen in dark mode" width="2000" height="1250" fetchpriority="high">
         </div>
         <div class="callout c1">
           <span class="ic" style="background:color-mix(in srgb, var(--category-person) 16%, transparent);color:var(--category-person)"><svg><use href="#i-link"/></svg></span>
@@ -526,7 +655,7 @@
               <li><svg><use href="#i-check"/></svg>Import an existing manuscript</li>
             </ul>
           </div>
-          <div class="frame"><img class="only-light" src="shots/library-light.webp" alt="Codex Library screen with series and standalone books" loading="lazy"><img class="only-dark" src="shots/library-dark.webp" alt="Codex Library screen, dark" loading="lazy"></div>
+          <div class="frame"><img class="only-light" src="shots/library-light.webp" alt="Codex Library screen: a bookshelf of book series and standalone books with word count progress" width="2000" height="1250" loading="lazy"><img class="only-dark" src="shots/library-dark.webp" alt="Codex Library screen, dark" width="2000" height="1250" loading="lazy"></div>
         </div>
 
         <div class="panel" id="p-plan" role="tabpanel">
@@ -539,7 +668,7 @@
               <li><svg><use href="#i-check"/></svg>Knowledge base entries pinned to scenes</li>
             </ul>
           </div>
-          <div class="frame"><img class="only-light" src="shots/plan-light.webp" alt="Codex Plan board with acts, chapters and scenes" loading="lazy"><img class="only-dark" src="shots/plan-dark.webp" alt="Codex Plan board, dark" loading="lazy"></div>
+          <div class="frame"><img class="only-light" src="shots/plan-light.webp" alt="Codex Plan board for outlining a book in acts, chapters and scenes" width="2000" height="1250" loading="lazy"><img class="only-dark" src="shots/plan-dark.webp" alt="Codex Plan board, dark" width="2000" height="1250" loading="lazy"></div>
         </div>
 
         <div class="panel" id="p-write" role="tabpanel">
@@ -552,7 +681,7 @@
               <li><svg><use href="#i-check"/></svg>Focus mode and a manuscript minimap</li>
             </ul>
           </div>
-          <div class="frame"><img class="only-light" src="shots/write-light.webp" alt="Codex Write screen" loading="lazy"><img class="only-dark" src="shots/write-dark.webp" alt="Codex Write screen, dark" loading="lazy"></div>
+          <div class="frame"><img class="only-light" src="shots/write-light.webp" alt="Codex Write screen: a manuscript editor with the scene summary in the margin" width="2000" height="1250" loading="lazy"><img class="only-dark" src="shots/write-dark.webp" alt="Codex Write screen, dark" width="2000" height="1250" loading="lazy"></div>
         </div>
 
         <div class="panel" id="p-codex" role="tabpanel">
@@ -565,7 +694,7 @@
               <li><svg><use href="#i-check"/></svg>Short summaries become AI context</li>
             </ul>
           </div>
-          <div class="frame"><img class="only-light" src="shots/codex-light.webp" alt="Codex knowledge base entry for Goodhart's Law" loading="lazy"><img class="only-dark" src="shots/codex-dark.webp" alt="Codex knowledge base entry, dark" loading="lazy"></div>
+          <div class="frame"><img class="only-light" src="shots/codex-light.webp" alt="Codex knowledge base entry for Goodhart's Law" width="2000" height="1250" loading="lazy"><img class="only-dark" src="shots/codex-dark.webp" alt="Codex knowledge base entry, dark" width="2000" height="1250" loading="lazy"></div>
         </div>
 
         <div class="panel" id="p-references" role="tabpanel">
@@ -578,7 +707,7 @@
               <li><svg><use href="#i-check"/></svg>A bibliography in your citation style</li>
             </ul>
           </div>
-          <div class="frame"><img class="only-light" src="shots/references-light.webp" alt="Codex References screen with copyright clearance" loading="lazy"><img class="only-dark" src="shots/references-dark.webp" alt="Codex References screen, dark" loading="lazy"></div>
+          <div class="frame"><img class="only-light" src="shots/references-light.webp" alt="Codex References screen: sources, citations and copyright clearance for quotes" width="2000" height="1250" loading="lazy"><img class="only-dark" src="shots/references-dark.webp" alt="Codex References screen, dark" width="2000" height="1250" loading="lazy"></div>
         </div>
 
         <div class="panel" id="p-print" role="tabpanel">
@@ -591,7 +720,7 @@
               <li><svg><use href="#i-check"/></svg>Export with bleed and crop marks</li>
             </ul>
           </div>
-          <div class="frame"><img class="only-light" src="shots/print-light.webp" alt="Codex Layout screen with a print preview" loading="lazy"><img class="only-dark" src="shots/print-dark.webp" alt="Codex Layout screen, dark" loading="lazy"></div>
+          <div class="frame"><img class="only-light" src="shots/print-light.webp" alt="Codex Layout screen: a live print preview of the book in a LaTeX template" width="2000" height="1250" loading="lazy"><img class="only-dark" src="shots/print-dark.webp" alt="Codex Layout screen, dark" width="2000" height="1250" loading="lazy"></div>
         </div>
       </div>
     </div>
@@ -655,7 +784,7 @@
             <div class="doc-head">
               <div>
                 <div class="crumb">Book 1 · Chapter 5</div>
-                <h3>Empowered teams</h3>
+                <div class="doc-title">Empowered teams</div>
               </div>
               <div class="presence">
                 <div class="avatars">
@@ -680,10 +809,51 @@
       </div>
 
       <div class="minis">
-        <div class="mini"><svg><use href="#i-shelf"/></svg><h4>Series-aware</h4><p>Settings and style guides copy down to every book in a series.</p></div>
-        <div class="mini"><svg><use href="#i-spark"/></svg><h4>AI that follows the plan</h4><p>Drafts start from your scene beats and knowledge base, not a blank prompt.</p></div>
-        <div class="mini"><svg><use href="#i-gear"/></svg><h4>Your house style</h4><p>Style guide, citation style and publisher rules set once per book.</p></div>
-        <div class="mini"><svg><use href="#i-moonbook"/></svg><h4>Always saved</h4><p>Changes save as you type, so there's no Save button to forget.</p></div>
+        <div class="mini"><svg><use href="#i-shelf"/></svg><h3>Series-aware</h3><p>Settings and style guides copy down to every book in a series.</p></div>
+        <div class="mini"><svg><use href="#i-spark"/></svg><h3>AI that follows the plan</h3><p>Drafts start from your scene beats and knowledge base, not a blank prompt.</p></div>
+        <div class="mini"><svg><use href="#i-gear"/></svg><h3>Your house style</h3><p>Style guide, citation style and publisher rules set once per book.</p></div>
+        <div class="mini"><svg><use href="#i-moonbook"/></svg><h3>Always saved</h3><p>Changes save as you type, so there's no Save button to forget.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <!-- Keep these answers in step with the FAQPage structured data in <head> -->
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head center">
+        <div class="eyebrow">FAQ</div>
+        <h2>Questions from writers.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What is Codex?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p>Codex is a free, open-source writing studio for long books and series. It puts book planning, a research knowledge base, a manuscript editor, citations and copyright clearance, and print layout in one app, so you can go from outline to print-ready PDF without moving your book between tools.</p>
+        </details>
+        <details>
+          <summary>Can I write fiction or a novel in Codex?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p>Yes. Codex is designed around non-fiction first, but the same tools work for novels and fiction series. Plan acts, chapters and scenes on a board, keep characters, places and backstory in the knowledge base under your own categories, draft from scene beats, and lay the book out with the built-in Novel template at 6×9 or 5.5×8.5 inches.</p>
+        </details>
+        <details>
+          <summary>Is Codex an alternative to Scrivener?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p>Codex covers the drafting and structure you might use Scrivener for, and adds what usually takes separate apps: a knowledge base that links itself into your text (a story bible, if you write fiction), source and permission tracking, and print layout of the kind you would otherwise do in a formatting tool such as Vellum or Atticus. It is free and open source.</p>
+        </details>
+        <details>
+          <summary>Can I use Codex to self-publish a book?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p>Codex exports a print-ready PDF from LaTeX templates, with your choice of trim size, bleed and crop marks when your printer wants them, and a preflight check for low-resolution images. That is the kind of file print-on-demand services such as Amazon KDP and IngramSpark ask for.</p>
+        </details>
+        <details>
+          <summary>Does Codex have an AI writing assistant?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p>Yes. Write a short scene beat and Codex drafts 200 to 600 words from it, using your plan and knowledge base as context so the draft fits the book. You choose the model, and you can regenerate or edit every word.</p>
+        </details>
+        <details>
+          <summary>How much does Codex cost, and when can I use it?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p>Codex is free and open source. The designs are done and version 1 is being built now. Follow the project on GitHub to see it take shape and to hear first when early access opens.</p>
+        </details>
+        <details>
+          <summary>Is Codex related to OpenAI Codex?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p>No. Codex at codexsuite.app is an independent, open-source writing studio for authors. It is not affiliated with OpenAI or its Codex coding agent.</p>
+        </details>
       </div>
     </div>
   </section>
