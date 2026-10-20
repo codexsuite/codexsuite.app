@@ -17,13 +17,15 @@ npx serve site
 
 ## Deploy
 
-The domain is on Cloudflare, so the simplest host is **Cloudflare Pages**:
+Merging to `main` publishes the site. [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) uploads `site/` to the Cloudflare Pages project `codexsuite`, which serves `codexsuite.app` and `www.codexsuite.app`. It runs when something under `site/` or the workflow itself changes, and you can also start it by hand from the Actions tab.
 
-1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Pages → Connect to Git** and pick this repo.
-2. Leave **Build command** empty and set **Build output directory** to `site`.
-3. Under **Custom domains**, add `codexsuite.app`.
+The workflow needs two repository secrets: `CLOUDFLARE_API_TOKEN`, a token with **Account → Cloudflare Pages: Edit**, and `CLOUDFLARE_ACCOUNT_ID`.
 
-Any static host works the same way: publish the `site/` folder as the web root.
+To deploy by hand with the same token in your environment:
+
+```sh
+npx wrangler pages deploy site --project-name codexsuite --branch main
+```
 
 ## Editing the page
 
