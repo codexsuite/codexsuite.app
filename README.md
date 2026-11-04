@@ -1,6 +1,6 @@
 # codexsuite.app
 
-The landing page for **Codex**, the open-source writing studio for non-fiction books and series. It is a single static page that says what Codex is and that it is open source and coming soon.
+The landing page for **Codex**, the open-source writing studio for non-fiction books and series. It is a single static page that says what Codex is and that it is open source and in development.
 
 | Folder | What it is |
 |---|---|
@@ -32,4 +32,4 @@ npx wrangler pages deploy site --project-name codexsuite --branch main
 - Colours, fonts and radii come from `site/tokens.css`, a copy of the Codex app's design tokens. Change the page's look there or in the `<style>` block in `index.html`, not with one-off hex values.
 - Every screenshot exists in light and dark. The page shows the one that matches the visitor's theme, so add or replace both.
 - Search and link previews: the page title, meta description, Open Graph and `twitter:*` tags, and the JSON-LD block are all in the `<head>` of `index.html`. The FAQ answers appear twice, in the visible `#faq` section and in the `FAQPage` JSON-LD, so change both together. Bump `<lastmod>` in `sitemap.xml` when the page changes meaningfully.
-- Links to GitHub point at the [`codexsuite`](https://github.com/codexsuite) org. Point them at the app repo once it is public.
+- Links to GitHub point at the public [`codexsuite/codex`](https://github.com/codexsuite/codex) app repository; documentation lives at [docs.codexsuite.app](https://docs.codexsuite.app/).
